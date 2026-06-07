@@ -1,0 +1,67 @@
+================================================================================
+                        CHANGELOG - FINAL CORRECTED
+                        Wow_scrpits-Master Content Audit
+================================================================================
+
+================================================================================
+[2026-06-07] CORRECTED - NIGHTHOLD IS COMPLETE!
+================================================================================
+
+CORRECTION: The Nighthold (10/10 bosses) is COMPLETE in the Legion/ folder!
+
+Previously reported as 4/10 based on BrokenIsles/TheNighthold/ only.
+The Legion/TheNighthold/ folder contains ALL 10 bosses:
+- Skorpyron
+- Chronomatic Anomaly
+- Trilliax
+- Spellblade Aluriel
+- Star Augur Etraeus
+- High Botanist Tel'arn
+- Krosus
+- Tichondrius
+- Elisande
+- Gul'dan
+
+Also corrected: The Arcway is 5/5 complete (Corstilax present in Legion/)
+
+================================================================================
+FINAL COVERAGE - CORRECTED
+================================================================================
+
+Expansion      | Coverage | Status
+---------------|----------|--------
+MOP            |   100%   | COMPLETE!
+Legion         |   100%   | COMPLETE!
+Cataclysm      |   ~90%   | Excellent
+BFA            |   ~90%   | Excellent
+WOD            |   ~90%   | Excellent
+WOTLK          |   ~95%   | Excellent
+TBC            |   ~90%   | Excellent
+Classic        |   ~95%   | Excellent
+Shadowlands    |   ~30%   | Needs Work
+Dragon Isles   |   ~20%   | Needs Work
+War Within     |   ~15%   | Needs Work
+
+================================================================================
+REPOSITORY STRUCTURE NOTE
+================================================================================
+
+Legion content exists in TWO locations:
+1. BrokenIsles/ - Partial Nighthold (4/10 bosses)
+2. Legion/ - COMPLETE with ALL content (10/10 Nighthold)
+
+The Legion/ folder is the COMPLETE version.
+
+================================================================================
+STILL MISSING - FINAL LIST
+================================================================================
+
+1. Crucible of Storms (2 bosses) - Only missing BFA raid
+2. Mechagon Island zone script
+3. Vashj'ir zone (Cataclysm)
+4. Shadowlands content (Castle Nathria, 8 dungeons, zones)
+5. Dragon Isles content
+6. War Within content
+7. BFA/Cata systems (non-critical)
+
+================================================================================

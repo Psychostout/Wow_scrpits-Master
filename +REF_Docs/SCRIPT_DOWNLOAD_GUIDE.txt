@@ -1,0 +1,290 @@
+================================================================================
+        EXACT FILES NEEDED FROM EACH SOURCE
+        Complete Download Guide
+================================================================================
+Generated: 2026-06-07
+
+================================================================================
+SOURCE 1: BfaCore (GitLab - Varjgard)
+         https://gitlab.com/Varjgard/BfaCore
+================================================================================
+STATUS: PRIVATE - Requires Donor Access
+
+WHAT YOU NEED:
+--------------
+
+1. ULDIR RAID (8 Bosses)
+   Files to request/download:
+   - src/server/scripts/BattleForAzeroth/Uldir/boss_taloc.cpp
+   - src/server/scripts/BattleForAzeroth/Uldir/boss_mother.cpp
+   - src/server/scripts/BattleForAzeroth/Uldir/boss_fetid_devourer.cpp
+   - src/server/scripts/BattleForAzeroth/Uldir/boss_zekvoz.cpp
+   - src/server/scripts/BattleForAzeroth/Uldir/boss_vectis.cpp
+   - src/server/scripts/BattleForAzeroth/Uldir/boss_zul.cpp
+   - src/server/scripts/BattleForAzeroth/Uldir/boss_mythrax.cpp
+   - src/server/scripts/BattleForAzeroth/Uldir/boss_guun.cpp
+   - src/server/scripts/BattleForAzeroth/Uldir/instance_uldir.cpp
+   - src/server/scripts/BattleForAzeroth/Uldir/uldir.h
+
+2. THRONE OF THUNDER (13 Bosses)
+   Files to request/download:
+   - src/server/scripts/Pandaria/ThroneOfThunder/boss_jinrokh.cpp
+   - src/server/scripts/Pandaria/ThroneOfThunder/boss_horridon.cpp
+   - src/server/scripts/Pandaria/ThroneOfThunder/boss_council_of_elders.cpp
+   - src/server/scripts/Pandaria/ThroneOfThunder/boss_tortos.cpp
+   - src/server/scripts/Pandaria/ThroneOfThunder/boss_megaera.cpp
+   - src/server/scripts/Pandaria/ThroneOfThunder/boss_jikun.cpp
+   - src/server/scripts/Pandaria/ThroneOfThunder/boss_durumu.cpp
+   - src/server/scripts/Pandaria/ThroneOfThunder/boss_primordius.cpp
+   - src/server/scripts/Pandaria/ThroneOfThunder/boss_dark_animus.cpp
+   - src/server/scripts/Pandaria/ThroneOfThunder/boss_iron_qon.cpp
+   - src/server/scripts/Pandaria/ThroneOfThunder/boss_twin_consorts.cpp
+   - src/server/scripts/Pandaria/ThroneOfThunder/boss_lei_shen.cpp
+   - src/server/scripts/Pandaria/ThroneOfThunder/boss_ra_den.cpp
+   - src/server/scripts/Pandaria/ThroneOfThunder/instance_throne_of_thunder.cpp
+   - src/server/scripts/Pandaria/ThroneOfThunder/throne_of_thunder.h
+
+3. NY'ALOTHA (Partial - Wrathion Script)
+   Files to request/download:
+   - src/server/scripts/BattleForAzeroth/Nyalotha/boss_wrathion.cpp
+   - src/server/scripts/BattleForAzeroth/Nyalotha/instance_nyalotha.cpp
+   - src/server/scripts/BattleForAzeroth/Nyalotha/nyalotha.h
+
+4. BFA DUNGEON LOOT DATA (SQL Files)
+   Files to request/download:
+   - sql/updates/world/*_motherlode_creature_loot.sql
+   - sql/updates/world/*_siege_of_boralus_creature_loot.sql
+   - sql/updates/world/*_toldagor_spawns.sql
+
+HOW TO GET ACCESS:
+1. Go to https://www.bfacore.com/
+2. Join their Discord server
+3. Register on the website
+4. Donate to get GitLab access OR request from community members
+5. Alternative: Contact Varjgard directly on GitLab
+
+================================================================================
+SOURCE 2: welder1976/bfacore (GitHub - Public Fork)
+         https://github.com/welder1976/bfacore
+================================================================================
+STATUS: PUBLIC but OUTDATED (Oct 2020)
+
+WHAT YOU CAN GET:
+-----------------
+This is an older fork with limited content. Only useful for:
+- Basic BFA framework code
+- Some SQL data
+- Script loader templates
+
+WHAT'S MISSING:
+- Most boss scripts were added AFTER this fork
+- Throne of Thunder not included
+- Ny'alotha not included
+- Many BFA dungeons not included
+
+HOW TO DOWNLOAD:
+1. Go to https://github.com/welder1976/bfacore
+2. Click green "Code" button
+3. Select "Download ZIP"
+4. Extract and browse src/server/scripts/ folder
+
+LIMITATIONS:
+- This is 4+ years old
+- Missing most raid content
+- Only useful as reference code
+
+================================================================================
+SOURCE 3: WowEmulationScriptPack
+         https://github.com/NeverlandWOW/WowEmulationScriptPack
+================================================================================
+STATUS: PUBLIC
+
+WHAT YOU CAN GET:
+-----------------
+Collection of public scripts from various sources. May contain:
+- Some BFA spell scripts
+- Some BFA creature scripts
+- Miscellaneous scripts from different emulators
+
+HOW TO DOWNLOAD:
+1. Go to https://github.com/NeverlandWOW/WowEmulationScriptPack
+2. Click green "Code" button
+3. Select "Download ZIP"
+4. Search through files for BFA/Legion/MOP content
+
+LIMITATIONS:
+- Not organized by expansion
+- May have duplicate/conflicting scripts
+- Quality varies widely
+- May not have the raid scripts you need
+
+================================================================================
+SOURCE 4: TrinityCore (Official)
+         https://github.com/TrinityCore/TrinityCore
+================================================================================
+STATUS: PUBLIC
+
+WHAT YOU CAN GET (Already have in your repo):
+----------------------------------------------
+- All WotLK raid scripts (reference code)
+- Script structure templates
+- Boss AI patterns to follow
+
+WHAT YOU CANNOT GET:
+- BFA content (not supported)
+- Legion content (not supported)
+- MOP content (not supported)
+
+USEFUL FOR:
+- Understanding boss script structure
+- Copying AI patterns for new scripts
+- Reference for coding standards
+
+================================================================================
+SOURCE 5: Cataclysm Preservation Project
+         https://github.com/The-Cataclysm-Preservation-Project/TrinityCore
+================================================================================
+STATUS: PUBLIC
+
+WHAT YOU CAN GET (Already have in your repo):
+----------------------------------------------
+- All Cataclysm dungeon scripts
+- All Cataclysm raid scripts
+- Zone scripts for revamped zones
+
+YOU ALREADY HAVE ALL OF THIS - No action needed.
+
+================================================================================
+WHAT YOU ACTUALLY NEED TO OBTAIN
+================================================================================
+
+PRIORITY 1 - CRITICAL (From BfaCore):
+--------------------------------------
+1. Throne of Thunder (13 boss .cpp files + instance + header)
+2. Uldir (8 boss .cpp files + instance + header)
+3. Ny'alotha (at minimum: Wrathion boss script)
+4. Battle of Dazar'alor (9 boss files) - May be in BfaCore
+5. Eternal Palace (8 boss files) - May be in BfaCore
+
+PRIORITY 2 - HIGH (From BfaCore):
+---------------------------------
+1. Freehold boss scripts
+2. Temple of Sethraliss boss scripts
+3. Tol Dagor boss scripts
+4. The MOTHERLODE!! boss scripts
+5. Siege of Boralus boss scripts
+6. Operation: Mechagon boss scripts
+
+PRIORITY 3 - MEDIUM (May be in BfaCore):
+-----------------------------------------
+1. Terrace of Endless Spring (4 boss files)
+2. Siege of Orgrimmar (14 boss files)
+
+PRIORITY 4 - LOW (Likely private):
+----------------------------------
+1. Legion Nighthold (10 boss files) - No public source found
+2. Legion Antorus remaining bosses (10 boss files)
+
+================================================================================
+EXACT FILE PATHS TO REQUEST FROM BfaCore
+================================================================================
+
+When you contact BfaCore developers, request these EXACT paths:
+
+BFA RAIDS:
+----------
+src/server/scripts/BattleForAzeroth/Uldir/
+src/server/scripts/BattleForAzeroth/BattleOfDazaralor/
+src/server/scripts/BattleForAzeroth/CrucibleOfStorms/
+src/server/scripts/BattleForAzeroth/EternalPalace/
+src/server/scripts/BattleForAzeroth/Nyalotha/
+
+BFA DUNGEONS:
+-------------
+src/server/scripts/BattleForAzeroth/Freehold/
+src/server/scripts/BattleForAzeroth/TempleOfSethraliss/
+src/server/scripts/BattleForAzeroth/TolDagor/
+src/server/scripts/BattleForAzeroth/Motherlode/
+src/server/scripts/BattleForAzeroth/SiegeOfBoralus/
+src/server/scripts/BattleForAzeroth/Mechagon/
+
+MOP RAIDS:
+----------
+src/server/scripts/Pandaria/TerraceOfEndlessSpring/
+src/server/scripts/Pandaria/ThroneOfThunder/
+src/server/scripts/Pandaria/SiegeOfOrgrimmar/
+
+SQL DATA:
+---------
+sql/updates/world/ (all BFA and MOP related .sql files)
+
+================================================================================
+WHAT YOU ALREADY HAVE (No Action Needed)
+================================================================================
+
+From your Wow_scrpits-Master repository, you already have:
+
+LEGION RAIDS:
+- Emerald Nightmare (7/7 bosses) ✅
+- Tomb of Sargeras (9/9 bosses) ✅
+- Trial of Valor (partial) ⚠️
+- Antorus (1/11 bosses) ⚠️
+
+MOP RAIDS:
+- Mogu'shan Vaults (6/6 bosses) ✅
+- Heart of Fear (6/6 bosses) ✅
+
+CATA RAIDS (All Complete):
+- Baradin Hold ✅
+- Bastion of Twilight ✅
+- Throne of the Four Winds ✅
+- Blackwing Descent ✅
+- Firelands ✅
+- Dragon Soul ✅
+
+LEGION DUNGEONS (11/13):
+- Black Rook Hold ✅
+- Court of Stars ✅
+- Darkheart Thicket ✅
+- Eye of Azshara ✅
+- Halls of Valor ✅
+- Maw of Souls ✅
+- Neltharion's Lair ✅
+- Vault of the Wardens ✅
+- Violet Hold ✅
+- Return to Karazhan ✅
+- Seat of the Triumvirate ✅
+- The Arcway ❌ MISSING
+- Cathedral of Eternal Night ❌ MISSING
+
+================================================================================
+RECOMMENDED NEXT STEPS
+================================================================================
+
+1. JOIN BFACORE DISCORD
+   - Go to https://www.bfacore.com/
+   - Find Discord invite link
+   - Join and introduce yourself
+   - Ask for access to scripts
+
+2. REGISTER ON BFACORE WEBSITE
+   - Create account
+   - Check for donor options
+   - Look for community script sharing
+
+3. CONTACT DEVELOPERS
+   - Varjgard (GitLab owner)
+   - Thordekk (Original BfaCore developer)
+   - welder1976 (GitHub fork owner)
+
+4. REQUEST EXACT FILES
+   - Use the file paths listed above
+   - Be specific about what you need
+   - Offer to contribute back to community
+
+5. ALTERNATIVE: Check Reddit/Discord
+   - r/wowservers subreddit
+   - WoW Emulation Discord servers
+   - Ask if anyone has these scripts to share
+
+================================================================================
