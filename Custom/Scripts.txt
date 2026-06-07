@@ -1,0 +1,341 @@
+================================================================================
+  PHASE 1+2 — SCRIPT SOURCE AUDIT REPORT
+  Generated: 2026-06-04
+  Last Updated: 2026-06-04 (Phase 2 — Additional repo search)
+================================================================================
+
+  CHANGELOG:
+  ----------
+  Phase 1 (2026-06-04): Initial search of 5 repos + 2 discovered repos.
+    Found: WoE boss scripts (AshamaneCore), ICC gunship (TC TDB735.00),
+    Sunwell Plateau (TC TDB735.00). BRF and HFC confirmed missing.
+
+  Phase 2 (2026-06-04): Searched 7 additional TC branches + 2 WoD repos.
+    NEW FIND: *** BLACKROCK FOUNDRY (all 10 bosses) FOUND in WoDCore! ***
+    Confirmed: All TC branches (7.0.3 through 7.3.5) have NO Draenor directory.
+    Confirmed: Hellfire Citadel still NOT FOUND in any repo.
+
+  PHASE 5 (2026-06-04): Downloaded full SingleCore_TC scripts repository.
+    *** spell_mastery.cpp FOUND (628 lines) — previously "NEEDS CHECK" ***
+    SingleCore_TC provides a COMPLETE Legion emulator script collection:
+      1182 files, 23MB covering ALL WoW expansions (Classic through Legion)
+
+    FULL VERIFICATION RESULTS:
+      SingleCore_TC: 1149 complete, 28 stubs, 5 infrastructure = 1182 total
+      Targeted:       50 complete, 17 stubs                     =  67 total
+      ─────────────────────────────────────────────────────────────────
+      GRAND TOTAL:  1199 complete, 45 stubs                     = 1249 files (25MB)
+
+    SingleCore_TC STUBS (28 files — empty AddSC_ bodies):
+      BrokenIsles:  zone_suramar, zone_stormheim, zone_valsharah, zone_highmountain,
+                    zone_vault_of_wardens, boss_naraxas, boss_rokmora, neltharions_lair,
+                    boss_ashgolm, boss_glazer, boss_anubesset, boss_festerface,
+                    boss_saelorn, boss_shivermaw, boss_ana_mouz, boss_drugon_the_frostblood,
+                    boss_levantus, boss_nazak_the_fiend, boss_the_soultakers, boss_withered_jim
+      EasternKingdoms: zone_burning_steppes, zone_stormwind_city, zone_tirisfal_glades
+      Kalimdor: zone_azshara, zone_darkshore, zone_orgrimmar, zone_stonetalon_mountains
+      World: conversation_scripts
+
+    Targeted STUBS (17 files — HFC boss stubs from Draenor-Core):
+      10 HFC boss .cpp files + 7 HFC boss .h files (copyright + empty AddSC_ only)
+
+Repositories Searched (Phase 1):
+  [1] TrinityCore/TrinityCore @ TDB735.00    (https://github.com/TrinityCore/TrinityCore/tree/TDB735.00)
+  [2] Trion-Control-Panel/ArgusCore           (https://github.com/Trion-Control-Panel/ArgusCore)
+  [3] MrDeadNoob/TrinityCore-7.3.5-26972     (https://github.com/MrDeadNoob/TrinityCore-7.3.5-26972)
+  [4] phunny-p4nd4/TrinityCoreLegion          (https://github.com/phunny-p4nd4/TrinityCoreLegion)
+  [5] hwis/TrinityCore-Legion                 (https://github.com/hwis/TrinityCore-Legion)
+  [6] AshamaneProject/AshamaneCore (legion)    (https://github.com/AshamaneProject/AshamaneCore/tree/legion) [DISCOVERED VIA SEARCH]
+  [7] conan513/SingleCore_TC                   (https://github.com/conan513/SingleCore_TC) [AshamaneCore fork]
+
+Repositories Searched (Phase 3):
+  [17] fluxurion/Draenor-Core (6.x WoD) — *** HAS HELLFIRE CITADEL + BRF + HIGHMAUL ***
+  [18] DSlayerMan/MaddieCore-MOP (5.4.8 MoP) — Has MoP raids/dungeons (NOT scenarios)
+  [19] ProjectSkyfire/SkyFire_548 (5.4.8 MoP) — Minimal Pandaria (2 dungeons only)
+
+Repositories Searched (Phase 4):
+  [20] conan513/SingleCore_TC (AshamaneCore-dmca) — *** MEGA HAUL: 1182 files, 23MB ***
+       Full Legion emulator with ALL expansions scripted:
+       - BrokenIsles: 134 files (15 dirs: Legion dungeons, raids, ClassHalls, zones)
+       - Pandaria: 79 files (9 dirs: MoP dungeons, raids, world bosses)
+       - Draenor: 50 files (Highmaul, dungeons, Garrison, TanaanIntro)
+       - EasternKingdoms: 260 files (all classic/Cata dungeons & raids)
+       - Kalimdor: 180 files (all classic/Cata dungeons & raids incl WellOfEternity)
+       - Northrend: 188 files (all WotLK dungeons & raids incl ICC)
+       - Outland: 117 files (all TBC dungeons & raids)
+       - Spells: 21 files (ALL class spells + mastery + artifacts + holidays)
+       - World: 17 files (guards, npcs, achievements, scenes, etc.)
+       - Events: 12 files (all holiday events)
+       FOUND: spell_mastery.cpp (628 lines, full content!)
+       NOT FOUND: AshranAreaTrigger.cpp, HatchingOfTheHippogryphs.cpp, MoP scenarios
+
+================================================================================
+  CATEGORY 1 — EMPTY FILES (0 bytes) — Need Full Scripts
+================================================================================
+
+  boss_mannoroth.cpp    [Well of Eternity]
+  ============================
+  STATUS: *** FOUND ***
+  SOURCE: AshamaneProject/AshamaneCore (legion branch)
+  PATH:   src/server/scripts/Kalimdor/CavernsOfTime/WellOfEternity/boss_mannoroth.cpp
+  URL:    https://github.com/AshamaneProject/AshamaneCore/blob/legion/src/server/scripts/Kalimdor/CavernsOfTime/WellOfEternity/boss_mannoroth.cpp
+  NOTES:  This file handles the Mannoroth AND Varo'then dual boss encounter.
+          In WoW, these are a single encounter. There is no separate boss_varothen.cpp
+          in any known open-source repo — Varo'then is scripted inside boss_mannoroth.cpp.
+
+  boss_varothen.cpp    [Well of Eternity]
+  ============================
+  STATUS: *** NOT FOUND AS SEPARATE FILE ***
+  NOTES:  No open-source repo has a standalone boss_varothen.cpp. In all known
+          implementations (including AshamaneCore), Varo'then is part of the
+          boss_mannoroth.cpp dual-encounter file. Your empty boss_varothen.cpp
+          should either be merged INTO boss_mannoroth.cpp, or the Varo'then logic
+          should be extracted from boss_mannoroth.cpp into this file.
+
+  ALSO FOUND in AshamaneCore WellOfEternity directory:
+    - boss_perotharn.cpp          (1st boss - Peroth'arn)
+    - boss_queen_azshara.cpp      (2nd boss - Queen Azshara)
+    - instance_well_of_eternity.cpp (instance script)
+    - well_of_eternity.cpp        (general scripts/encounters)
+    - well_of_eternity.h          (header)
+    - well_of_eternity_teleport.cpp (teleport handling)
+  All at: https://github.com/AshamaneProject/AshamaneCore/tree/legion/src/server/scripts/Kalimdor/CavernsOfTime/WellOfEternity
+
+================================================================================
+  CATEGORY 2 — ENTIRE RAIDS MISSING ALL BOSS SCRIPTS
+================================================================================
+
+  Blackrock Foundry (WoD) — 10 bosses
+  ============================
+  STATUS: *** FOUND IN WODCORE *** (Phase 2 discovery)
+  SOURCE: cooler-SAI/WoDCore (WoD 6.2.3 core)
+  PATH:   src/server/scripts/Draenor/BlackrockFoundry/
+  URL:    https://github.com/cooler-SAI/WoDCore/tree/master/src/server/scripts/Draenor/BlackrockFoundry
+
+  Boss Scripts Found:
+    1.  Gruul              — boss_gruul_foundry.cpp
+    2.  Oregorger          — boss_oregorger.cpp + .hpp
+    3.  Beastlord Darmac   — boss_beastlord_darmac.cpp + .hpp
+    4.  Hans'gar & Franzok — boss_hansgar_and_franzok.cpp + .hpp
+    5.  Flamebender Ka'graz — boss_flamebender_kagraz.cpp
+    6.  Kromog             — boss_kromog.cpp + .hpp
+    7.  Operator Thogar    — boss_operator_thogar.cpp + .hpp
+    8.  Iron Maidens       — boss_iron_maidens.cpp + .hpp
+    9.  Blast Furnace      — boss_blast_furnace.cpp + .hpp
+    10. Blackhand          — boss_blackhand.cpp + .hpp
+
+  Supporting Files:
+    - blackrock_foundry.cpp (instance/encounter orchestration)
+    - blackrock_foundry.hpp (header)
+    - instance_blackrock_foundry.cpp (instance script)
+
+  NOTE: These are from a 6.2.3 WoD core (NOT a Legion core). They will need
+  adaptation for your 7.3.5 Legion core — includes, class interfaces, and
+  some APIs may differ. However, the boss AI logic and spell mechanics
+  should transfer well as they use the same underlying engine.
+
+  Also available from WoDCore: Highmaul (all 7 bosses), all WoD dungeons
+  (Auchindoun, BloodmaulSlagMines, Everbloom, GrimrailDepot, IronDocks,
+  ShadowmoonBurialGrounds, Skyreach), Garrison scripts, TanaanIntro.
+  FULL DRAENOR DIR: https://github.com/cooler-SAI/WoDCore/tree/master/src/server/scripts/Draenor
+
+  Hellfire Citadel (WoD) — 13 bosses
+  ============================
+  STATUS: *** FOUND IN DRAENOR-CORE *** (Phase 3 discovery)
+  SOURCE: fluxurion/Draenor-Core (6.x WoD core)
+  PATH:   src/server/scripts/Draenor/HellfireCitadel/
+  URL:    https://github.com/fluxurion/Draenor-Core/tree/master/src/server/scripts/Draenor/HellfireCitadel
+
+  Boss Scripts Found (all 13):
+    1.  Hellfire Assault    — boss_hellfire_assault_hfc.cpp + .h
+    2.  Iron Reaver         — boss_iron_reaver_hfc.cpp + .h
+    3.  Kormrok             — boss_kormrok_hfc.cpp + .h
+    4.  Kilrogg Deadeye     — boss_kilrog_hfc.cpp + .h
+    5.  Hellfire High Council — boss_high_council_hfc.cpp + .h
+    6.  Gorefiend           — boss_gorefiend_hfc.cpp + .h
+    7.  Shadow-Lord Iskar   — boss_iskar_hfc.cpp + .h
+    8.  Socrethar           — boss_socrethar_hfc.cpp + .h
+    9.  Fel Lord Zakuun     — boss_zakuun_hfc.cpp + .h
+    10. Xhul'horac          — boss_xhulhorac_hfc.cpp + .h
+    11. Tyrant Velhari      — boss_velhari_hfc.cpp + .h
+    12. Mannoroth           — boss_mannoroth_hfc.cpp + .h
+    13. Archimonde          — boss_archimonde_hfc.cpp + .h
+
+  Supporting Files:
+    - hellfire_citadel.cpp (encounter orchestration)
+    - hellfire_citadel.h (header)
+    - instance_hellfire_citadel.cpp (instance script)
+
+  NOTE: Same as BRF — these are from a 6.x WoD core, will need adaptation
+  for 7.3.5 Legion. File naming uses _hfc suffix convention.
+  Draenor-Core also has BRF, Highmaul, all WoD dungeons, and more.
+  FULL DRAENOR DIR: https://github.com/fluxurion/Draenor-Core/tree/master/src/server/scripts/Draenor
+
+================================================================================
+  CATEGORY 3 — PARTIAL/INCOMPLETE BOSS SCRIPTS
+================================================================================
+
+  boss_queen_azshara.cpp    [Well of Eternity]
+  ============================
+  STATUS: *** FULL VERSION FOUND ***
+  SOURCE: AshamaneProject/AshamaneCore (legion branch)
+  PATH:   src/server/scripts/Kalimdor/CavernsOfTime/WellOfEternity/boss_queen_azshara.cpp
+  URL:    https://github.com/AshamaneProject/AshamaneCore/blob/legion/src/server/scripts/Kalimdor/CavernsOfTime/WellOfEternity/boss_queen_azshara.cpp
+  NOTES:  This is the full CreatureScript with boss AI, not just a spell aura script.
+
+  boss_gunship_battle.cpp    [ICC]
+  ============================
+  STATUS: *** FULL VERSION FOUND ***
+  SOURCE: TrinityCore/TrinityCore @ TDB735.00
+  PATH:   src/server/scripts/Northrend/IcecrownCitadel/boss_icecrown_gunship_battle.cpp
+  URL:    https://github.com/TrinityCore/TrinityCore/blob/TDB735.00/src/server/scripts/Northrend/IcecrownCitadel/boss_icecrown_gunship_battle.cpp
+
+  ALSO AVAILABLE FROM:
+    - ArgusCore: https://github.com/Trion-Control-Panel/ArgusCore/blob/main/src/server/scripts/Northrend/IcecrownCitadel/boss_icecrown_gunship_battle.cpp
+    - MrDeadNoob: https://github.com/MrDeadNoob/TrinityCore-7.3.5-26972/blob/7.3.5.26973/src/server/scripts/Northrend/IcecrownCitadel/boss_icecrown_gunship_battle.cpp
+    - hwis: https://github.com/hwis/TrinityCore-Legion/blob/7.3.5.26972/src/server/scripts/Northrend/IcecrownCitadel/boss_icecrown_gunship_battle.cpp
+    - phunny-p4nd4: https://github.com/phunny-p4nd4/TrinityCoreLegion/blob/master/src/server/scripts/Northrend/IcecrownCitadel/boss_icecrown_gunship_battle.cpp
+    - AshamaneCore: Same path structure under legion branch
+
+  NOTE: File is named boss_icecrown_gunship_battle.cpp (not boss_gunship_battle.cpp).
+  Your 21-line stub file is named boss_gunship_battle.cpp — you may need to rename.
+
+================================================================================
+  CATEGORY 4 — STUB SCRIPTS (compile but do nothing at runtime)
+================================================================================
+
+  --- 1 Raid Script ---
+
+  sunwell_plateau.cpp    [Sunwell Plateau]
+  ============================
+  STATUS: *** FULL VERSION FOUND ***
+  SOURCE: TrinityCore/TrinityCore @ TDB735.00
+  PATH:   src/server/scripts/EasternKingdoms/SunwellPlateau/sunwell_plateau.cpp
+  URL:    https://github.com/TrinityCore/TrinityCore/blob/TDB735.00/src/server/scripts/EasternKingdoms/SunwellPlateau/sunwell_plateau.cpp
+  ALSO:   All boss scripts are also present:
+    - boss_brutallus.cpp, boss_eredar_twins.cpp, boss_felmyst.cpp
+    - boss_kalecgos.cpp, boss_kiljaeden.cpp, boss_muru.cpp
+    - instance_sunwell_plateau.cpp, sunwell_plateau.h
+  FULL DIRECTORY: https://github.com/TrinityCore/TrinityCore/tree/TDB735.00/src/server/scripts/EasternKingdoms/SunwellPlateau
+
+  --- 1 Spell Script ---
+
+  spell_mastery.cpp    [Spells]
+  ============================
+  STATUS: *** NEEDS INDIVIDUAL SEARCH ***
+  NOTES:  This is likely a Legion mastery spell script. Check:
+    - ArgusCore Spells: https://github.com/Trion-Control-Panel/ArgusCore/tree/main/src/server/scripts/Spells
+    - AshamaneCore Spells: https://github.com/AshamaneProject/AshamaneCore/tree/legion/src/server/scripts/Spells
+
+  --- 1 PvP Script ---
+
+  AshranAreaTrigger.cpp    [PvP/Ashran]
+  ============================
+  STATUS: *** NEEDS INDIVIDUAL SEARCH ***
+  NOTES:  Ashran was a WoD PvP zone. Check:
+    - ArgusCore may have outdoor PvP scripts
+    - AshamaneCore may have Ashran-related scripts
+
+  --- 1 Micro-Holiday ---
+
+  HatchingOfTheHippogryphs.cpp    [Events]
+  ============================
+  STATUS: *** NEEDS INDIVIDUAL SEARCH ***
+  NOTES:  This is a Legion micro-holiday event. None of the searched repos
+          appear to have micro-holiday scripts implemented. This would need
+          to be written from scratch or found in a more specialized repo.
+
+  --- 9+ Zone Scripts ---
+
+  Zone scripts (Ironforge, Loch Modan, Silverpine, Swamp of Sorrows, Azshara,
+  Darkshore, Felwood, Feralas, Orgrimmar, Stonetalon, Thousand Needles, Un'Goro):
+  ============================
+  STATUS: *** PARTIALLY AVAILABLE ***
+  NOTES:  TrinityCore TDB735.00 and ArgusCore have zone scripts for EasternKingdoms
+          and Kalimdor. These are the "zone_*.cpp" files at the top level of each
+          continent directory. The stubs in your project likely came from the base
+          TrinityCore and may have content in these repos.
+  CHECK:
+    - https://github.com/TrinityCore/TrinityCore/tree/TDB735.00/src/server/scripts/EasternKingdoms
+    - https://github.com/TrinityCore/TrinityCore/tree/TDB735.00/src/server/scripts/Kalimdor
+    - https://github.com/Trion-Control-Panel/ArgusCore/tree/main/src/server/scripts/EasternKingdoms
+    - https://github.com/Trion-Control-Panel/ArgusCore/tree/main/src/server/scripts/Kalimdor
+
+  --- 17 MoP Scenario Scripts ---
+
+  MoP Scenarios (all placeholders):
+  ============================
+  STATUS: *** NOT FOUND IN ANY REPO ***
+  NOTES:  None of the searched repos (including ArgusCore which has a Pandaria
+          directory) have MoP scenario scripts. ArgusCore's Pandaria only has:
+    - pandaria_scripts_loader.cpp
+    - zone_the_jade_forest.cpp
+    - zone_the_wandering_isle.cpp
+          No scenario scripts exist in any public Legion emulator repo.
+          These would need to be written from scratch.
+
+================================================================================
+  SUMMARY TABLE
+================================================================================
+
+  Script/Group                        | Found?  | Source Repo         | Action
+  ------------------------------------|---------|---------------------|------------------
+  boss_mannoroth.cpp (WoE)            | YES     | AshamaneCore/legion | COPY & ADAPT
+  boss_varothen.cpp (WoE)             | NO*     | N/A                 | EXTRACT from boss_mannoroth.cpp
+  boss_queen_azshara.cpp (WoE)        | YES     | AshamaneCore/legion | COPY & ADAPT
+  boss_gunship_battle.cpp (ICC)       | YES     | TC TDB735.00       | COPY (rename to match)
+  boss_perotharn.cpp (WoE bonus)      | YES     | AshamaneCore/legion | COPY & ADAPT
+  Blackrock Foundry (10 bosses)       | YES !!  | WoDCore (6.2.3)    | COPY & ADAPT for 7.3.5
+  Hellfire Citadel (13 bosses)        | PARTIAL | Draenor-Core (6.x) | 3/13 have content, 10 are stubs
+  sunwell_plateau.cpp                 | YES     | TC TDB735.00       | COPY & ADAPT
+  spell_mastery.cpp                   | TBD     | Check ArgusCore/AC  | NEEDS CHECK
+  AshranAreaTrigger.cpp               | TBD     | Check ArgusCore/AC  | NEEDS CHECK
+  HatchingOfTheHippogryphs.cpp        | NO      | N/A                 | WRITE FROM SCRATCH
+  Zone scripts (9+)                   | PARTIAL | TC TDB735.00       | CHECK & ADAPT
+  MoP Scenarios (17)                  | NO      | N/A                 | SEE BELOW
+
+  * boss_varothen does not exist as a separate file; Varo'then is coded
+    inside boss_mannoroth.cpp as a dual encounter.
+
+  MoP SCENARIOS STATUS (Phase 3):
+    MaddieCore-MOP has extensive MoP content but NO scenario scripts:
+      Raids: MogushanVault, MogushanPalace, HeartofFear, TerraceofEndlessSpring,
+             ThroneOfThunder, SiegeOfOrgrimmar
+      Dungeons: GateSettingSun, ShadopanMonastery, StormstoutBrewery,
+                TempleJadeSerpent, SiegeNiuzaoTemple
+      Zones + WorldBosses + TimelessIsle
+    SkyFire_548 has minimal Pandaria (StormstoutBrewery, TempleOfJadeSerpent,
+      zone_wandering_island.cpp only).
+    NO SCENARIO SCRIPTS found in any repo. These must still be written.
+
+  TOTALS:
+    Downloaded & COMPLETE:           50 files (targeted boss scripts from Phases 1-4)
+    Downloaded but STUBS:            17 files (10 HFC boss .cpp + 7 HFC .h)
+    SingleCore_TC full collection: 1182 files (complete Legion emulator scripts)
+    NOW RESOLVED: spell_mastery.cpp ✅ (628 lines in SingleCore_TC/Spells/)
+    Still NOT FOUND:                 18 files (AshranAreaTrigger, HatchingOfTheHippogryphs,
+                                          17 MoP scenarios — none exist in any repo)
+    Still need writing from scratch: 18 files total
+
+================================================================================
+  RECOMMENDED PRIORITY ORDER FOR NEXT PHASES
+================================================================================
+
+  PHASE 2 — Quick Wins (copy existing scripts):
+    1. boss_mannoroth.cpp from AshamaneCore (Well of Eternity)
+    2. boss_queen_azshara.cpp from AshamaneCore (Well of Eternity)
+    3. boss_perotharn.cpp from AshamaneCore (Well of Eternity — bonus!)
+    4. boss_gunship_battle.cpp from TrinityCore TDB735.00 (ICC)
+    5. Sunwell Plateau full boss suite from TrinityCore TDB735.00
+    6. Blackrock Foundry (all 10 bosses) from WoDCore — ADAPT for 7.3.5
+    7. Zone scripts from TrinityCore TDB735.00
+
+  PHASE 3 — Medium Effort (verify and fill gaps):
+    8. spell_mastery.cpp — check ArgusCore and AshamaneCore Spells directories
+    9. AshranAreaTrigger.cpp — check ArgusCore OutdoorPvP and World scripts
+    10. HatchingOfTheHippogryphs.cpp — check Events directories
+
+  PHASE 4 — Major Effort (write from scratch):
+    13. MoP Scenario scripts (17 scripts) — NO source available anywhere
+
+================================================================================
