@@ -1,0 +1,97 @@
+================================================================================
+ CURRENT MISSING CONTENT - STEP 5 VERIFIED (POST DELETION)
+ Fresh Scan - 2026-06-07
+================================================================================
+Note: Shadowlands, DragonIsles, and KhazAlgar were DELETED in Step 4.
+This list reflects the current state of the kept content (BFA, Legion, MOP, Cata, WoD, WotLK, TBC, Classic + supporting).
+
+================================================================================
+FULLY MISSING (0% - DELETED IN STEP 4)
+================================================================================
+- Shadowlands: All content gone (Castle Nathria, Sanctum of Domination, Sepulcher, 8 dungeons, all zones: Bastion, Maldraxxus, Ardenweald, Revendreth, The Maw, Korthia, Zereth Mortis, etc.)
+- DragonIsles (Dragon Flight): All content gone (Aberrus, Azure Vault, Ruby Life Pools, Vault of the Incarnates, Amirdrassil, zones, etc.)
+- The War Within (KhazAlgar): All content gone (Nerub'ar Palace, City of Threads, Darkflame Cleft, Stone Vault, zones, etc.)
+
+================================================================================
+BFA (8.3.7) - CORE COMPLETE, MINOR GAPS REMAIN
+================================================================================
+Dungeons: 11/11 - ALL PRESENT (verified)
+Raids: 5/5 - ALL PRESENT (Uldir, Battle of Dazar'alor, Crucible of Storms in KulTiras/CrucibleOfStorms, Eternal Palace, Ny'alotha in KulTiras/Nyalotha)
+Zones: Most present (Kul Tiras + Zandalar + Nazjatar)
+
+MISSING:
+- Mechagon Island full zone script (Operation Mechagon dungeon is fully present in KulTiras/Operation Mechagon)
+- Island Expeditions system
+- Warfronts (Arathi Highlands, Darkshore, etc.)
+- Heart of Azeroth / Azerite system (only partial spell_azerite.cpp in Spells/)
+- Corruption system (8.3)
+- Horrific Visions / Visions of N'Zoth
+
+================================================================================
+CATACLYSM (4.3.4) - MOSTLY COMPLETE
+================================================================================
+Dungeons & Raids: All present (confirmed in EasternKingdoms, Kalimdor, Maelstrom)
+Zones: Many present, including:
+  - zone_mount_hyjal.cpp (found)
+  - zone_uldum.cpp (found)
+
+MISSING:
+- Full Vashj'ir zone script (only old TBC boss_lady_vashj.cpp exists; no dedicated Cata Vashj'ir sub-zones scripting)
+- Transmogrification system
+- LFR (Looking for Raid) system
+- Archaeology system
+- Guild leveling / other minor systems
+
+================================================================================
+MOP (5.4.8) - CORE COMPLETE
+================================================================================
+Dungeons, Raids, Zones, World Bosses: All major present (Pandaria folder comprehensive)
+
+MISSING:
+- Isle of Thunder zone script
+- Isle of Giants zone script
+- Full Proving Grounds system (partial files exist in Scenario/ and Battlegrounds/)
+- Challenge Mode dungeons (partial references only)
+- Some minor scenario polish
+
+================================================================================
+WOD (6.x) - PRESENT AND SUBSTANTIAL
+================================================================================
+Draenor/ folder has 186 files including:
+- Highmaul, Blackrock Foundry, Hellfire Citadel (raids)
+- Auchindoun, BloodmaulSlagMines, Everbloom, GrimrailDepot, IronDocks, ShadowmoonBurialGrounds, etc. (dungeons)
+- Garrison, zones
+
+Coverage appears good (~80-90% based on prior audits; no major new gaps found in this scan).
+
+================================================================================
+LEGION, WOTLK, TBC, CLASSIC - HIGH / NEAR COMPLETE
+================================================================================
+- Legion: 100% (as previously verified)
+- MOP: Core 100% (minor gaps above)
+- WotLK: Strong (Northrend has IcecrownCitadel full, Ulduar, Naxxramas, zones)
+- TBC: Strong (Outland has BlackTemple, TempestKeep, etc.)
+- Classic: Present via EasternKingdoms and Kalimdor revamps + core zones (Deadmines, Shadowfang, classic leveling zones)
+
+No major new gaps found in fresh scan for these.
+
+================================================================================
+OVERALL CURRENT STATUS (STEP 5)
+================================================================================
+Kept expansions (BFA/Legion/MOP/Cata/WoD/WotLK/TBC/Classic): Very strong core boss/zone scripting.
+The only major "missing" now are the three expansions deleted in Step 4.
+
+Remaining gaps are mostly:
+1. BFA systems (non-boss features)
+2. A few Cata and MOP zone scripts
+3. Polish / systems for older expansions
+
+PRIORITIES FOR NEXT STEPS:
+CRITICAL: (Already deleted) Shadowlands, DragonIsles, War Within
+MEDIUM: BFA systems + Mechagon zone; Cata Vashj'ir; MOP Isle of Thunder/Giants
+LOW: Systems polish, minor zones
+
+================================================================================
+RECOMMENDATION: Update BFA_report.txt, FINAL_REPORT.txt, and STILL_MISSING.txt with this current data.
+The +REF_Docs still contain Step 3 versions.
+================================================================================
